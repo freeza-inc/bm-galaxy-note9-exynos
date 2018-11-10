@@ -1968,7 +1968,7 @@ static int itmon_probe(struct platform_device *pdev)
 	itmon->pdata->rpathinfo = rpathinfo;
 	itmon->pdata->nodegroup = nodegroup;
 
-#ifdef CONFIG_SEC_DEBUG
+#ifdef CONFIG_SEC_AVC_LOG
 	if (sec_debug_check_sj()) {
 		printk("%s: LOCKED, no s2d\n", __func__);
 		itmon->pdata->sysfs_s2d = 0;
