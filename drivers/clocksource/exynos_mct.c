@@ -421,6 +421,7 @@ static int set_state_shutdown(struct clock_event_device *evt)
 
 	mevt = container_of(evt, struct mct_clock_event_device, evt);
 	exynos4_mct_tick_stop(mevt, 1);
+	exynos4_mct_tick_clear(mevt, 1);
 	return 0;
 }
 
